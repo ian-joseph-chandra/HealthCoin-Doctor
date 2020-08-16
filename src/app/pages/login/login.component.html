@@ -1,0 +1,48 @@
+<body class="adjust-screen" style="padding-top: 13%">
+
+<div class="med-life-text">MED-LIFE</div>
+
+<form class="login-box">
+  <div class="user-pass-input-box">
+    <div class="input-box">
+      <span class="input-icon">@</span>
+
+      <label>
+        <input class="email-fill" type="email" placeholder="Email" [(ngModel)]="inputEmail" name="email">
+      </label>
+    </div>
+
+    <div class="input-box">
+      <span class="input-icon">
+        <i class="fa fa-key"></i>
+      </span>
+
+      <label>
+        <input class="pass-fill" type="password" placeholder="Password" [(ngModel)]="inputPass" id="password"
+               name="password">
+      </label>
+
+      <span *ngIf="showPassword == false && inputPass !== ''" (click)="showPasswordToggle()" class="pass-icon">
+          <i class="fa fa-eye"></i>
+      </span>
+      <span *ngIf="showPassword == true && inputPass !== ''" (click)="showPasswordToggle()" class="pass-icon">
+          <i class="fa fa-eye-slash"></i>
+      </span>
+    </div>
+  </div>
+
+<!--  <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div>-->
+  <div *ngIf="error" class="error-message">{{message}}</div>
+  <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
+    Masuk
+  </button>
+</form>
+
+<div class="sign-up">
+  <span style="color: black"> Don't have account? </span>
+  <span (click)="router.goToSignUpPage()">Daftar</span>
+</div>
+
+</body>
+
+

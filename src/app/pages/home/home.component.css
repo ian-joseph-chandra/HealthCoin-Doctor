@@ -1,0 +1,105 @@
+header, .search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+}
+
+.title {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 5%;
+  font-size: 4vh;
+}
+
+.search-bar {
+  width: 40%;
+  height: 65%;
+  margin-left: 7%;
+  border-radius: 5vw;
+  background-color: white;
+}
+
+.search-icon, .search-disease {
+  position: relative;
+}
+
+.search-icon {
+  color: #32C8D7;
+  margin-left: 2%;
+  font-size: 4vh;
+}
+
+.search-disease {
+  height: 70%;
+  border: none;
+  font-size: 4vh;
+  width: 83%;
+  margin-left: 2%;
+}
+
+.profile-button {
+  color: #32C8D7;
+  border-radius: 50%;
+  font-size: 7vh;
+  position: absolute;
+  float: right;
+  right: 3%;
+}
+
+.content {
+  height: 90vh;
+  background-image: url("src/assets/images/home-page/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.overlay-background {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: black;
+  opacity: 40%;
+}
+
+.welcome-text, .vision-text {
+  position: relative;
+  width: fit-content;
+  margin-left: 5%;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.welcome-text {
+  margin-top: 30vh;
+  color: #32C8D7;
+  font-style: italic;
+}
+
+.vision-text {
+  margin-top: 2vh;
+}
+
+.qr-code-button {
+  width: 60vh;
+  height: 9vh;
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  background: #00778E;
+  border-radius: 5vh;
+  border: #00778E;
+  margin: 5vh 0 0 5%;
+}
+
+input::placeholder {
+  opacity: 50%;
+}
