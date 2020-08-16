@@ -21,7 +21,7 @@ body {
 }
 
 .email-fill .pass-fill {
-  margin: 10px; 
+  margin: 10px;
   border: none;
   position: relative;
 }
@@ -45,6 +45,7 @@ body {
   color: red;
   font-size: 2vw;
 }
+
 
 .login-button {
   border-radius: 12px;
