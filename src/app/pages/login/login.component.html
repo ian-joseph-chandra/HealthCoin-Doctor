@@ -34,12 +34,12 @@
   <!-- <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
   <div *ngIf="error" class="error-message">{{message}}</div>
   <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
-    Masuk
+    Log In
   </button>
 </form>
 
 <div class="sign-up">
-  <span style="color: black"> Don't have account? </span>
+  <span style="color: black"> Belum memiliki akun? </span>
   <span (click)="router.goToSignUpPage()">Daftar</span>
 </div>
 
