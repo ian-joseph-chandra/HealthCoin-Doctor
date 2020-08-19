@@ -2,6 +2,7 @@ body {
   background-color: #303450;
   text-align: center;
   font-family: sans-serif;
+  height: 100vh;
 }
 
 .login-box{
@@ -11,8 +12,8 @@ body {
 
 .healthcoin-text {
   color: white;
-  padding: 7vw 0 6vw 0;
-  font-size: 2vw;
+  padding: 15vh 0 10vh 0;
+  font-size: 5vh;
 }
 
 .user-pass-input-box {
@@ -21,11 +22,11 @@ body {
 
 .input-box {
   position: relative;
-  margin: 0 auto 1vw auto;
+  margin: 0 auto 2vh auto;
   border-radius: 100px;
   border: 1px solid grey;
-  width: 30%;
-  height: 3.5vw;
+  width: 60%;
+  height: 8vh;
 }
 
 .input-icon{
