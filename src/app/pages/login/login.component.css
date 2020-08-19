@@ -21,29 +21,37 @@ body {
 }
 
 .input-box {
-  position: relative;
-  margin: 0 auto 2vh auto;
+  margin: 0 auto 3vh auto;
   border-radius: 100px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   width: 60%;
   height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .input-icon{
-  margin: 1vw 0 1vw 2vw;
+  margin-left: 2vw;
   color: #32C8D7;
-  font-size: 1.2vw;
-  position: relative;
-  float: left;
+  font-size: 3vh;
 }
 
 .email-fill, .pass-fill {
-  position: relative;
-  float: left;
-  margin: 1.1vw 0 1vw 1vw;
-  font-size: 1.2vw;
+  width: 45vw;
+  margin-left: 2vw;
+  font-size: 4vh;
   border: none;
   background-color: #303450;
+  color: white;
+  justify-content: space-between;
+}
+
+.show-pass-icon{
+  position: relative;
+  color: white;
+  font-size: 4vh;
+  margin-left: 3vw;
 }
 
 ::placeholder {
@@ -52,7 +60,7 @@ body {
 }
 
 .user-recovery-hyperlink{
-  color: #7EF9FF;
+  color: #32C8D7;
   font-size: 3vw;
   margin-bottom: 5px;
 }
@@ -64,18 +72,19 @@ body {
 
 .login-button {
   border-radius: 80px;
-  background-color: #4FD0DD;
-  color: white;
+  background-color: #32C8D7;
+  color: black;
   border-color: transparent;
-  margin: 6vw 40% 0 40%;
+  margin-top: 10vh;
   width: 20%;
   height: 7vh;
-  font-size: 1.3vw;
+  font-size: 4.5vh;
 }
 
 .sign-up {
   float: right;
-  font-size: 1vw;
-  margin : 4vw 4vw 0 auto;
-  color: #7EF9FF;
+  font-size: 4vh;
+  width: 100%;
+  margin-top: 6vh;
+  color: #32C8D7;
 }

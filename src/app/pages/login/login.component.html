@@ -1,9 +1,8 @@
-<body>
+<body style="min-width: 100vh">
 
-<div class="healthcoin-text">H E A L T H C O I N</div>
+  <div class="healthcoin-text">H E A L T H C O I N</div>
 
-<form class="login-box">
-  <div class="user-pass-input-box">
+  <form class="login-box">
     <div class="input-box">
       <span class="input-icon" id="email-icon">@</span>
 
@@ -22,27 +21,24 @@
                name="password">
       </label>
 
-      <span *ngIf="showPassword == false && inputPass !== ''" (click)="showPasswordToggle()" class="pass-icon">
+      <span *ngIf="showPassword == false && inputPass !== ''" (click)="showPasswordToggle()" class="show-pass-icon">
           <i class="fa fa-eye"></i>
       </span>
-      <span *ngIf="showPassword == true && inputPass !== ''" (click)="showPasswordToggle()" class="pass-icon">
+      <span *ngIf="showPassword == true && inputPass !== ''" (click)="showPasswordToggle()" class="show-pass-icon">
           <i class="fa fa-eye-slash"></i>
       </span>
     </div>
-  </div>
 
-  <!-- <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
-  <div *ngIf="error" class="error-message">{{message}}</div>
-  <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
-    LOG IN
-  </button>
+    <!-- <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
+    <div *ngIf="error" class="error-message">{{message}}</div>
+    <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
+      LOG IN
+    </button>
 
 
-  <div class="sign-up">
-    <span style="color: #aaa9a8"> Belum memiliki akun? </span>
-    <span (click)="router.goToSignUpPage()">Daftar</span>
-  </div>
-</form>
+    <div class="sign-up">
+      <span style="color: #aaa9a8"> Belum memiliki akun? </span>
+      <span (click)="router.goToSignUpPage()">Daftar</span>
+    </div>
+  </form>
 </body>
-
-
