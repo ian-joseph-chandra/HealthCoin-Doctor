@@ -1,10 +1,10 @@
-<body class="adjust-screen" style="height: 100%;">
+<body>
 
-<div class="med-life-text">MED-LIFE</div>
+<div class="healthcoin-text">H E A L T H C O I N</div>
 
 <form class="login-box">
   <div class="user-pass-input-box">
-    <div class="input-box">
+    <div class="input-box" id="user-email-box">
       <span class="input-icon">@</span>
 
       <label>
@@ -12,7 +12,7 @@
       </label>
     </div>
 
-    <div class="input-box">
+    <div class="input-box" id="user-pass-box">
       <span class="input-icon">
         <i class="fa fa-key"></i>
       </span>
@@ -34,15 +34,15 @@
   <!-- <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
   <div *ngIf="error" class="error-message">{{message}}</div>
   <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
-    Log In
+    LOG IN
   </button>
+
+
+  <div class="sign-up">
+    <span style="color: #aaa9a8"> Belum memiliki akun? </span>
+    <span (click)="router.goToSignUpPage()">Daftar</span>
+  </div>
 </form>
-
-<div class="sign-up">
-  <span style="color: black"> Belum memiliki akun? </span>
-  <span (click)="router.goToSignUpPage()">Daftar</span>
-</div>
-
 </body>
 
 
