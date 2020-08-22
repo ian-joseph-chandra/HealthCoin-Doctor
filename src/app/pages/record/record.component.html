@@ -1,32 +1,55 @@
-<body>
-<header>
-  <div class="header-healthcoin-text">H E A L T H C O I N</div>
-
-  <div class="header-disease-input-box">
-    <span id="search-icon">
-      <i class="fa fa-search" aria-hidden="true"></i>
+<body class="adjust-screen, dark-mode" style="min-width: 135vh">
+  <header>
+    <span class="title">
+      H E A L T H C O I N
     </span>
-    <label>
-        <!--input id="search-disease" type="" placeholder="Search Disease" [(ngModel)]="inputEmail" name="email"-->
-    </label>
-  </div>
 
-  <div class="header-edit-button">
-    <i class="fa fa-pencil" aria-hidden="true"></i>
-  </div>
+    <span class="search-bar">
+      <span class="search-icon">
+        <i class="fas fa-search"></i>
+      </span>
 
-  <div class="header-username">
-    <span id="username">
-      <p>Dr. Ian Joseph</p>
+      <input placeholder="Cari Info Penyakit" class="search-disease">
     </span>
-    <span id="user-icon">
-      <i class="fa fa-user" aria-hidden="true"></i>
+
+    <span class="write-button">
+      <i class="fas fa-pencil-alt" aria-hidden="true"></i>
     </span>
+
+    <span class="profile-name">
+      Dr. Ian Joseph
+    </span>
+
+    <span class="profile-button">
+      <i class="fas fa-user-circle"></i>
+    </span>
+
+  </header>
+
+  <div class="content">
+    <div class="split left">
+      <div class="user-profile">
+        <span>
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </span>
+
+        <div>
+          <p>Hello,</p>
+          <p>Tom Hanks</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="split right">
+      <div class="medical-record">
+        <div class="title">
+          <span>Penyakit</span>
+          <span>Rumah sakit</span>
+          <span>Dokter</span>
+          <span>Tanggal & waktu</span>
+        </div>
+      </div>
+    </div>
   </div>
-</header>
-
-<div class="content">
-
-</div>
 
 </body>
