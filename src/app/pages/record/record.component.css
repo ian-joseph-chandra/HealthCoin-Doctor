@@ -78,6 +78,9 @@ header {
   margin: 0.8vh 0 0 2vh;
 }
 
+
+
+
 .content{
   position: relative;
   background-color: #aaa9a8;
@@ -100,6 +103,7 @@ header {
 
 
 
+
 .patient-profile{
   position: relative;
   height: 100%;
@@ -107,14 +111,14 @@ header {
 }
 
 .patient-base-profile{
-  padding: 8vh 0 8vh 8vh;
+  padding: 8vh 10%;
 }
 
 .patient-photo{
   border: 1px solid lightgrey;
   border-radius: 50%;
   margin: 1vh;
-  font-size: 15vh;
+  font-size: 17vh;
   display: inline-block;
 }
 
@@ -158,12 +162,13 @@ header {
   background-color: #3db7a1;
   border-bottom: 1px solid white;
   text-align: right;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 .patient-additional-profile ::placeholder{
   color: white;
 }
+
 
 
 
@@ -176,7 +181,7 @@ header {
 .record-categories{
   position: relative;
   height: 10%;
-  margin: 0 0 1vh 6%;
+  margin: 0 0 4vh 6%;
   top: 5vh;
 }
 
