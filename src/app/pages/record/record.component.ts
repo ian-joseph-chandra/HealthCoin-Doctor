@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ApiService} from '../../services/api/api.service';
 import {RouterService} from '../../services/router/router.service';
 
@@ -9,12 +9,15 @@ import {RouterService} from '../../services/router/router.service';
 })
 export class RecordComponent implements OnInit {
 
+  records;
+
   constructor(
     public router: RouterService,
     private api: ApiService) {
   }
 
   ngOnInit(): void {
+    this.records = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
 
 }

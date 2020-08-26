@@ -8,6 +8,7 @@ import {LoginComponent} from './pages/login/login.component';
 import {RecordComponent} from './pages/record/record.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {QRCodeModule} from 'angularx-qrcode';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

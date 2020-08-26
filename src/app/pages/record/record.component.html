@@ -1,130 +1,73 @@
-<body class="adjust-screen, dark-mode" style="min-width: 135vh">
-  <header>
-    <span class="title">
-      H E A L T H C O I N
-    </span>
-
-    <span class="search-bar">
-      <span class="search-icon">
-        <i class="fas fa-search"></i>
+<body class="adjust-screen, dark-mode" style="min-width: 153vh">
+  <div class="scrollable-section">
+    <div *ngFor="let record of records" class="record-box">
+      <span class="record-detail">Virus Corona</span>
+      <span class="record-detail">Siloam</span>
+      <span class="record-detail">Dr. Robert</span>
+      <span class="record-detail">
+        <span style="display: block">
+          <span class="record-time">18:35</span>
+          <span class="record-date">13-03-2020</span>
+        </span>
       </span>
-
-      <input placeholder="Cari Info Penyakit" class="search-disease">
-    </span>
-
-    <span class="write-button">
-      <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-    </span>
-
-    <span class="profile-button">
-      <i class="fas fa-user-circle"></i>
-    </span>
-
-    <span class="profile-name">
-      Dr. Ian Joseph
-    </span>
-
-  </header>
-
-  <div class="content">
-    <div class="split left">
-      <div class="patient-profile">
-        <div class="patient-base-profile">
-          <div class="patient-photo">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </div>
-          <div class="patient-name-gender">
-            <div id="patient-hello">Hello,</div>
-            <div id="patient-name">Tom Hanks</div>
-            <div id="patient-gender"><i class="fa fa-mars"></i></div>
-          </div>
-        </div>
-
-        <div class="patient-additional-profile">
-          <input placeholder="24 April 2001" class="patient-data-content">
-          <p class="patient-data-category">Tanggal lahir</p>
-          <input placeholder="085217750115" class="patient-data-content">
-          <p class="patient-data-category">Nomor HP</p>
-          <input placeholder="evelyneve2404@gmail.com" class="patient-data-content">
-          <p class="patient-data-category">Email</p>
-          <input placeholder="THI blok EE no 1, Jakarta Barat" class="patient-data-content">
-          <p class="patient-data-category">Alamat</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="split right">
-      <div class="medical-record">
-        <div class="record-categories">
-          <span class="record-category">Penyakit</span>
-          <span class="record-category">Rumah sakit</span>
-          <span class="record-category">Dokter</span>
-          <span class="record-category">Tanggal & waktu</span>
-        </div>
-
-        <div>
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-
-          <div class="record-box">
-            <span class="record-disease">Virus Corona</span>
-            <span class="record-hospital">Siloam</span>
-            <span class="record-doctor">Dr. Robert</span>
-            <span class="record-time-date">
-              <span class="record-time">18.35</span>
-              <span class="record-date">13.03.2020</span>
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
+  <div class="static-section">
+    <header>
+      <span class="title">H E A L T H C O I N</span>
+
+      <span class="search-bar">
+        <span class="search-icon">
+          <i class="fas fa-search"></i>
+        </span>
+
+        <input placeholder="Cari Info Penyakit" class="search-disease">
+      </span>
+
+      <span class="write-button">
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+      </span>
+
+      <span class="profile-button">
+        <i class="fas fa-user-circle"></i>
+      </span>
+
+      <span class="profile-name">Dr. Ian Joseph</span>
+    </header>
+
+    <div class="patient-profile">
+      <div class="patient-base-profile">
+        <div class="patient-photo">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+
+        <div class="patient-name-gender">
+          <div id="patient-hello">Hello,</div>
+          <div id="patient-name">Tom Hanks</div>
+          <div id="patient-gender"><i class="fa fa-mars"></i></div>
+        </div>
+      </div>
+
+      <div class="patient-additional-profile">
+        <input placeholder="24 April 2001" class="patient-data-content">
+        <p class="patient-data-category">Tanggal lahir</p>
+        <input placeholder="085217750115" class="patient-data-content">
+        <p class="patient-data-category">Nomor HP</p>
+        <input placeholder="evelyneve2404@gmail.com" class="patient-data-content">
+        <p class="patient-data-category">Email</p>
+        <input placeholder="THI blok EE no 1, Jakarta Barat" class="patient-data-content">
+        <p class="patient-data-category">Alamat</p>
+      </div>
+    </div>
+
+    <div class="record-categories">
+      <span class="record-category-box">
+        <span class="record-category" style="margin-left: 6.8vh">Penyakit</span>
+        <span class="record-category">Rumah sakit</span>
+        <span class="record-category">Dokter</span>
+        <span class="record-category">Tanggal & waktu</span>
+      </span>
+    </div>
+  </div>
 </body>
