@@ -1,6 +1,15 @@
 body {
   height: 100%;
+  overflow-x: hidden;
   font-family: sans-serif;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: #5b6191;
 }
 
 .static-section {
@@ -28,9 +37,12 @@ header {
 .title {
   position: absolute;
   width: fit-content;
-  height: fit-content;
+  height: 100%;
   margin-left: 5%;
   font-size: 4vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar {
@@ -71,6 +83,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .profile-button {
@@ -106,62 +119,72 @@ header {
 }
 
 .patient-base-profile {
-  padding: 8vh 0 8vh 8vh;
+  width: 100%;
+  height: fit-content;
+  display: inline-block;
+  margin-top: 5vh;
 }
 
 .patient-photo {
-  border: 1px solid lightgrey;
-  border-radius: 50%;
-  margin: 1vh;
+  width: 40%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 15vh;
-  display: inline-block;
 }
 
 .patient-name-gender {
-  display: inline-block;
-  padding: 2vh 0 0 2vh;
+  width: 60%;
+  float: left;
 }
 
-#patient-hello {
-  font-weight: bold;
-  color: black;
-  font-size: 5vh;
-}
-
-#patient-name {
-  color: black;
+.patient-hello, .patient-name, .patient-gender {
+  display: block;
+  width: 100%;
   font-size: 4vh;
 }
 
-#patient-gender {
+.patient-hello, .patient-name {
   color: black;
-  font-size: 5vh;
 }
 
-.patient-additional-profile {
-  position: relative;
-  width: 100%;
+.patient-hello {
+  font-weight: bold;
 }
 
-.patient-data-category {
-  position: relative;
-  margin: 0 0 3vh 4%;
-  font-size: 3vh;
+.patient-detail-profile, .detail-profile-section {
+  height: fit-content;
 }
 
-.patient-data-content {
-  position: absolute;
-  margin: 0 3% 2vh 3%;
+.patient-detail-profile {
+  margin-top: 5vh
+}
+
+.detail-profile-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.5vh;
   width: 90%;
-  border: none;
-  background-color: #3db7a1;
-  border-bottom: 1px solid white;
-  text-align: right;
-  font-size: 3vh;
+  margin: 2vh auto 0 auto;
+  border-bottom: 2px solid white;
 }
 
-.patient-additional-profile ::placeholder {
-  color: white;
+.detail-profile-key {
+  font-weight: bolder;
+}
+
+.record-number {
+  margin: 10vh auto 0 auto;
+  height: 26vh;
+  width: 26vh;
+  background: white;
+  border-radius: 15vh;
+  border: 1.5vh dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black
 }
 
 .record-categories {
@@ -174,9 +197,9 @@ header {
 .record-category-box {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 8vh;
-  width: 88%;
+  width: 60vw;
+  margin-left: 7vw;
 }
 
 .record-category {
@@ -190,25 +213,26 @@ header {
 
 .scrollable-section {
   background: #5b6191;
-  position: relative;
-  display: block;
-  height: fit-content;
-  min-height: 82vh;
-  width: 70vw;
+  position: fixed;
+  width: 70%;
   margin-top: 18vh;
-  margin-left:30vw
+  margin-left: 30%;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
 }
 
 .record-box {
   position: relative;
   border: 1px solid white;
   background-color: white;
-  border-radius: 5vh;
-  width: 85%;
-  margin: 2vh auto 2vh auto;
+  border-radius: 2vh;
+  width: 60vw;
+  margin: 2vh 2vw 0 auto;
   height: 10vh;
-  padding-left: 4.8vh;
+  padding-left: 2vw;
   display: flex;
+  cursor: pointer;
 }
 
 .record-detail {
@@ -228,5 +252,15 @@ header {
 
 .record-time {
   font-weight: bold;
+}
+
+.arrow-button {
+  width: 7%;
+  height: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vh;
 }
 

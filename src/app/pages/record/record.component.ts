@@ -10,7 +10,7 @@ import {RouterService} from '../../services/router/router.service';
 export class RecordComponent implements OnInit {
 
   records;
-
+  recordNumber = 5;
   constructor(
     public router: RouterService,
     private api: ApiService) {

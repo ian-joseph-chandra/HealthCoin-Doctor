@@ -1,4 +1,4 @@
-<body class="adjust-screen, dark-mode" style="min-width: 153vh">
+<body class="dark-mode">
   <div class="scrollable-section">
     <div *ngFor="let record of records" class="record-box">
       <span class="record-detail">Virus Corona</span>
@@ -6,9 +6,12 @@
       <span class="record-detail">Dr. Robert</span>
       <span class="record-detail">
         <span style="display: block">
-          <span class="record-time">18:35</span>
           <span class="record-date">13-03-2020</span>
+          <span class="record-time">18:35</span>
         </span>
+      </span>
+      <span class="arrow-button">
+        <i class="fas fa-angle-right"></i>
       </span>
     </div>
   </div>
@@ -38,32 +41,46 @@
 
     <div class="patient-profile">
       <div class="patient-base-profile">
-        <div class="patient-photo">
-          <i class="fa fa-user" aria-hidden="true"></i>
+        <span class="patient-photo">
+          <i class="fas fa-user-circle" aria-hidden="true"></i>
+        </span>
+
+        <span class="patient-name-gender">
+          <span class="patient-hello">Halo,</span>
+          <span class="patient-name">Tom Hanks</span>
+        </span>
+      </div>
+
+      <div class="patient-detail-profile">
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Jenis Kelamin</span>
+          <span class="detail-profile-value">Pria</span>
         </div>
 
-        <div class="patient-name-gender">
-          <div id="patient-hello">Hello,</div>
-          <div id="patient-name">Tom Hanks</div>
-          <div id="patient-gender"><i class="fa fa-mars"></i></div>
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Golongan Darah</span>
+          <span class="detail-profile-value">A+</span>
+        </div>
+
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Tanggal Lahir</span>
+          <span class="detail-profile-value">22 April 1998</span>
         </div>
       </div>
 
-      <div class="patient-additional-profile">
-        <input placeholder="24 April 2001" class="patient-data-content">
-        <p class="patient-data-category">Tanggal lahir</p>
-        <input placeholder="085217750115" class="patient-data-content">
-        <p class="patient-data-category">Nomor HP</p>
-        <input placeholder="evelyneve2404@gmail.com" class="patient-data-content">
-        <p class="patient-data-category">Email</p>
-        <input placeholder="THI blok EE no 1, Jakarta Barat" class="patient-data-content">
-        <p class="patient-data-category">Alamat</p>
+      <div class="record-number">
+        <div style="height: fit-content; width: 90%">
+          <div style="font-size: 8vh; text-align: center;">{{recordNumber}}</div>
+          <div *ngIf="recordNumber>1" style="font-size: 3vh; text-align: center;">Medical Records</div>
+          <div *ngIf="recordNumber<=1" style="font-size: 3vh; text-align: center;">Medical Record</div>
+        </div>
       </div>
+
     </div>
 
     <div class="record-categories">
       <span class="record-category-box">
-        <span class="record-category" style="margin-left: 6.8vh">Penyakit</span>
+        <span class="record-category">Penyakit</span>
         <span class="record-category">Rumah sakit</span>
         <span class="record-category">Dokter</span>
         <span class="record-category">Tanggal & waktu</span>
