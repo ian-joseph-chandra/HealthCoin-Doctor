@@ -4,14 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-.background {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  background: #5b6191;
-}
-
 .static-section {
   position: fixed;
   min-width: 153vh;
@@ -100,4 +92,12 @@ header {
   float: right;
   font-size: 3vh;
   margin: 0.8vh 0 0 2vh;
+}
+
+.record-box{
+
+}
+
+.record-content{
+  border-bottom: 1px solid lightskyblue;
 }
