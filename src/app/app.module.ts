@@ -8,6 +8,7 @@ import {LoginComponent} from './pages/login/login.component';
 import {RecordComponent} from './pages/record/record.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {WriteRecordComponent} from './pages/write-record/write-record.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RecordComponent
+    RecordComponent,
+    WriteRecordComponent
   ],
   imports: [
     BrowserModule,
