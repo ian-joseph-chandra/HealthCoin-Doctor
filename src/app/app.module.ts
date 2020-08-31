@@ -10,7 +10,6 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {QRCodeModule} from 'angularx-qrcode';
 import { RecordListComponent } from './pages/record-list/record-list.component';
-import {WriteRecordComponent} from './pages/write-record/write-record.component';
 
 
 @NgModule({
@@ -18,8 +17,7 @@ import {WriteRecordComponent} from './pages/write-record/write-record.component'
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RecordListComponent,
-    WriteRecordComponent
+    RecordListComponent
   ],
   imports: [
     BrowserModule,
