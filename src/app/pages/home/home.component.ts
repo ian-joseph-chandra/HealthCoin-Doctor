@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  qrHeight: any;
+  qrString: string;
+  qrShowed: boolean;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit(): void {
+    this.qrString = 'htttp://localhost:4200/home';
+    this.qrHeight = window.innerHeight * 0.37;
+    this.qrShowed = false;
+  }
+
+  resizeQrCode() {
+    this.qrHeight = window.innerHeight * 0.37;
+    document.getElementsByTagName('qrcode')[0].setAttribute('width', this.qrHeight);
+  }
+
+  toggleQrCode() {
+    this.qrShowed = !this.qrShowed;
+    document.getElementById('qr-code').style.display = this.qrShowed ? 'block' : 'none';
+
+  }
 }

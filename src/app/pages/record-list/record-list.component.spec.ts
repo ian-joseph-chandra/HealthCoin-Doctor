@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WriteRecordComponent } from './write-record.component';
+import { RecordListComponent } from './record-list.component';
 
-describe('WriteRecordComponent', () => {
-  let component: WriteRecordComponent;
-  let fixture: ComponentFixture<WriteRecordComponent>;
+describe('RecordListComponent', () => {
+  let component: RecordListComponent;
+  let fixture: ComponentFixture<RecordListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WriteRecordComponent ]
+      declarations: [ RecordListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WriteRecordComponent);
+    fixture = TestBed.createComponent(RecordListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
