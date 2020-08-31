@@ -5,10 +5,10 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './pages/home/home.component';
 import {LoginComponent} from './pages/login/login.component';
-import {RecordComponent} from './pages/record/record.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {WriteRecordComponent} from './pages/write-record/write-record.component';
+import {QRCodeModule} from 'angularx-qrcode';
+import { RecordListComponent } from './pages/record-list/record-list.component';
 
 
 @NgModule({
@@ -16,14 +16,14 @@ import {WriteRecordComponent} from './pages/write-record/write-record.component'
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RecordComponent,
-    WriteRecordComponent
+    RecordListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,89 @@
+<body class="dark-mode">
+  <div class="scrollable-section">
+    <div *ngFor="let record of records" class="record-box">
+      <span class="record-detail">Virus Corona</span>
+      <span class="record-detail">Siloam</span>
+      <span class="record-detail">Dr. Robert</span>
+      <span class="record-detail">
+        <span style="display: block">
+          <span class="record-date">13-03-2020</span>
+          <span class="record-time">18:35</span>
+        </span>
+      </span>
+      <span class="arrow-button">
+        <i class="fas fa-angle-right"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="static-section">
+    <header>
+      <span class="title">H E A L T H C O I N</span>
+
+      <span class="search-bar">
+        <span class="search-icon">
+          <i class="fas fa-search"></i>
+        </span>
+
+        <input placeholder="Cari Info Penyakit" class="search-disease">
+      </span>
+
+      <span class="write-button">
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+      </span>
+
+      <span class="profile-button">
+        <i class="fas fa-user-circle"></i>
+      </span>
+
+      <span class="profile-name">Dr. Ian Joseph</span>
+    </header>
+
+    <div class="patient-profile">
+      <div class="patient-base-profile">
+        <span class="patient-photo">
+          <i class="fas fa-user-circle" aria-hidden="true"></i>
+        </span>
+
+        <span class="patient-name-gender">
+          <span class="patient-hello">Halo,</span>
+          <span class="patient-name">Tom Hanks</span>
+        </span>
+      </div>
+
+      <div class="patient-detail-profile">
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Jenis Kelamin</span>
+          <span class="detail-profile-value">Pria</span>
+        </div>
+
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Golongan Darah</span>
+          <span class="detail-profile-value">A+</span>
+        </div>
+
+        <div class="detail-profile-section">
+          <span class="detail-profile-key">Tanggal Lahir</span>
+          <span class="detail-profile-value">22 April 1998</span>
+        </div>
+      </div>
+
+      <div class="record-number">
+        <div style="height: fit-content; width: 90%">
+          <div style="font-size: 8vh; text-align: center;">{{recordNumber}}</div>
+          <div *ngIf="recordNumber>1" style="font-size: 3vh; text-align: center;">Rekam Medis</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="record-categories">
+      <span class="record-category-box">
+        <span class="record-category">Penyakit</span>
+        <span class="record-category">Rumah sakit</span>
+        <span class="record-category">Dokter</span>
+        <span class="record-category">Tanggal & waktu</span>
+      </span>
+    </div>
+  </div>
+</body>
