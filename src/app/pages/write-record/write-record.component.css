@@ -8,7 +8,7 @@ body {
   position: fixed;
   min-width: 153vh;
   width: 100vw;
-  height: 18vh;
+  height: 10vh;
   left: 0;
   top: 0;
 }
@@ -94,10 +94,59 @@ header {
   margin: 0.8vh 0 0 2vh;
 }
 
-.record-box{
 
+.content {
+  margin-top: 10vh;
+  position: fixed;
+  min-width: 153vh;
+  background-color: #5b6191;
+  height: 90vh;
+  width: 100%;
+}
+
+.content-box{
+  width: 95%;
+  height: 90%;
+  border: 1px solid lightskyblue;
+  border-radius: 4vh;
+  margin: auto;
+  background-color: white;
+  margin-top: 2.5vh;
+  padding-top: 3vh;
 }
 
 .record-content{
+  border: none;
+  width: 95%;
+  margin: 1vh 4vh;
+  font-size: 3vh;
+}
+#disease, #hospital, #doctor{
   border-bottom: 1px solid lightskyblue;
+}
+
+::placeholder{
+  color: #3db7a1;
+}
+
+.scrollable-section {
+  width: 90%;
+  height: 40%;
+  margin-top: 35vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.upload-button{
+  float: right;
+  border-radius: 0.8vh;
+  border: 1px solid lightskyblue;
+  background-color: lightseagreen;
+  color: white;
+  margin: 54vh 2vh 0 0;
+  width: 10%;
+  height: 5.5vh;
+  font-size: 3vh;
 }
