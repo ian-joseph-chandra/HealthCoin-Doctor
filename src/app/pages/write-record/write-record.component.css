@@ -109,9 +109,8 @@ header {
   height: 90%;
   border: 1px solid lightskyblue;
   border-radius: 4vh;
-  margin: auto;
   background-color: white;
-  margin-top: 2.5vh;
+  margin: 2.5vh auto 0 auto;
   padding-top: 3vh;
 }
 
@@ -121,6 +120,7 @@ header {
   margin: 1vh 4vh;
   font-size: 3vh;
 }
+
 #disease, #hospital, #doctor{
   border-bottom: 1px solid lightskyblue;
 }
@@ -130,12 +130,7 @@ header {
 }
 
 .scrollable-section {
-  width: 90%;
-  height: 40%;
-  margin-top: 35vh;
   position: fixed;
-  top: 0;
-  bottom: 0;
   overflow-y: auto;
 }
 
