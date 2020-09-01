@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {JsonObject} from '@angular/compiler-cli/ngcc/src/packages/entry_point';
 
 @Injectable({
   providedIn: 'root'

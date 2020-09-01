@@ -8,8 +8,10 @@ import {LoginComponent} from './pages/login/login.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {QRCodeModule} from 'angularx-qrcode';
-import { RecordListComponent } from './pages/record-list/record-list.component';
-import { WriteRecordComponent } from './pages/write-record/write-record.component';
+import {RecordListComponent} from './pages/record-list/record-list.component';
+import {WriteRecordComponent} from './pages/write-record/write-record.component';
+import {ReadRecordComponent} from './pages/read-record/read-record.component';
+import {RegisterComponent} from './pages/register/register.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { WriteRecordComponent } from './pages/write-record/write-record.componen
     HomeComponent,
     LoginComponent,
     RecordListComponent,
-    WriteRecordComponent
+    WriteRecordComponent,
+    ReadRecordComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
