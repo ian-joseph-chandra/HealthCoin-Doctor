@@ -63,28 +63,13 @@ header {
   margin-left: 2%;
 }
 
-.write-button {
-  font-size: 4.5vh;
-  border: 0.5vh solid #7EF9FF;
-  border-radius: 1.5vh;
-  width: 6vh;
-  height: 6vh;
-  margin-left: 2%;
-  background-color: #7EF9FF;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
 .profile-button {
   position: relative;
   color: #32C8D7;
   border-radius: 50%;
   font-size: 7vh;
   float: right;
-  margin-left: 10vh;
+  margin-left: 20vh;
 }
 
 .profile-name {
@@ -130,8 +115,29 @@ header {
 }
 
 .scrollable-section {
-  position: fixed;
   overflow-y: auto;
 }
+
+.upload-button{
+  float: right;
+  border-radius: 0.8vh;
+  border: 1px solid lightskyblue;
+  background-color: lightseagreen;
+  color: white;
+  margin: 48vh 2vh 0 0;
+  width: 10%;
+  height: 5.5vh;
+  font-size: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
 
 

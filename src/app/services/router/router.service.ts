@@ -13,8 +13,8 @@ export class RouterService {
     await this.router.navigate(['login']);
   }
 
-  async goToRegisterPage() {
-    await this.router.navigate(['register']);
+  async goToSignUpPage() {
+    await this.router.navigate(['sign-up']);
   }
 
   async goToHomePage() {

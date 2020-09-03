@@ -63,13 +63,28 @@ header {
   margin-left: 2%;
 }
 
+.write-button {
+  font-size: 4.5vh;
+  border: 0.5vh solid #7EF9FF;
+  border-radius: 1.5vh;
+  width: 6vh;
+  height: 6vh;
+  margin-left: 2%;
+  background-color: #7EF9FF;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .profile-button {
   position: relative;
   color: #32C8D7;
   border-radius: 50%;
   font-size: 7vh;
   float: right;
-  margin-left: 20vh;
+  margin-left: 10vh;
 }
 
 .profile-name {
@@ -102,31 +117,17 @@ header {
 .record-content{
   border: none;
   width: 95%;
-  margin: 1vh 4vh;
+  margin: 2vh 4vh;
   font-size: 3vh;
+  color: #3db7a1;
 }
 
 #disease, #hospital, #doctor{
   border-bottom: 1px solid lightskyblue;
 }
 
-::placeholder{
-  color: #3db7a1;
-}
-
-.scrollable-section {
-  position: fixed;
+#scrollable-section {
   overflow-y: auto;
 }
 
-.upload-button{
-  float: right;
-  border-radius: 0.8vh;
-  border: 1px solid lightskyblue;
-  background-color: lightseagreen;
-  color: white;
-  margin: 54vh 2vh 0 0;
-  width: 10%;
-  height: 5.5vh;
-  font-size: 3vh;
-}
+

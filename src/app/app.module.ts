@@ -11,7 +11,8 @@ import {QRCodeModule} from 'angularx-qrcode';
 import {RecordListComponent} from './pages/record-list/record-list.component';
 import {WriteRecordComponent} from './pages/write-record/write-record.component';
 import {ReadRecordComponent} from './pages/read-record/read-record.component';
-import {RegisterComponent} from './pages/register/register.component';
+import {SignUpComponent} from './pages/sign-up/sign-up.component';
+
 
 
 @NgModule({
@@ -22,14 +23,15 @@ import {RegisterComponent} from './pages/register/register.component';
     RecordListComponent,
     WriteRecordComponent,
     ReadRecordComponent,
-    RegisterComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    QRCodeModule
+    QRCodeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
