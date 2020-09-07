@@ -38,7 +38,7 @@ header {
   height: 70%;
   border: none;
   font-size: 4vh;
-  width: 83%;
+  width: 80%;
   margin-left: 2%;
 }
 
@@ -89,8 +89,87 @@ header {
   border-radius: 5vh;
   border: #00778E;
   margin: 5vh 0 0 5%;
+  cursor: pointer;
 }
 
+.qr-code-background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.qr-code-card {
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+  width: 60vh;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(10, 13, 54, 1) 33%, rgba(16, 22, 82, 1) 68%, rgba(15, 21, 81, 1) 100%);
+  border-radius: 2vh;
+}
+
+.card-close-section {
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.close-button {
+  height: 80%;
+  font-size: 5vh;
+  width: 10%;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+.card-healthcoin-text {
+  height: 10%;
+  text-align: center;
+  font-size: 5vh
+}
+
+.qr-code-section {
+  height: 40vh;
+  width: 100%;
+}
+
+.qr-code-box {
+  height: 100%;
+  width: 40vh;
+  background: white;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-guide-text {
+  width: 100%;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 5%
+}
+
+.card-doctor-name {
+  text-align: center;
+  color: #32C8D7;
+  font-size: 5vh;
+  margin-top: 15%;
+}
+
+.qrcode{
+  min-height: 90vh;
+  min-width: 90vh;
+}
 input::placeholder {
   opacity: 50%;
 }

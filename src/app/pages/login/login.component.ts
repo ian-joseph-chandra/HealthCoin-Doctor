@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiService} from '../../services/api/api.service';
 import {RouterService} from '../../services/router/router.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public router: RouterService,
-    private api: ApiService) {
+    private api: ApiService,
+    private cookieService: CookieService) {
   }
 
   async ngOnInit() {
@@ -34,7 +36,7 @@ export class LoginComponent implements OnInit {
 
 // If not error, go to home page
     if (!this.error) {
-      // this.cookieService.set('user_id', this.userId);
+      this.cookieService.set('user_id', this.userId);
       await this.router.goToHomePage();
     }
   }

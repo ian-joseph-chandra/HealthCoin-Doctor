@@ -1,20 +1,20 @@
 <body class="adjust-screen, dark-mode" style="min-width: 135vh">
   <header>
-  <span class="title">
-    H E A L T H C O I N
-  </span>
-
-    <span class="search-bar">
-    <span class="search-icon">
-      <i class="fas fa-search"></i>
+    <span class="title">
+      H E A L T H C O I N
     </span>
 
-    <input placeholder="Cari Info Penyakit" class="search-disease">
-  </span>
+    <span class="search-bar">
+      <span class="search-icon">
+        <i class="fas fa-search"></i>
+      </span>
+
+      <input placeholder="Cari Info Penyakit" class="search-disease">
+    </span>
 
     <span class="profile-button">
-    <i class="fas fa-user-circle"></i>
-  </span>
+      <i class="fas fa-user-circle"></i>
+    </span>
   </header>
 
   <div class="content">
@@ -28,8 +28,29 @@
       </p>
     </div>
 
-    <button class="qr-code-button">
+    <button class="qr-code-button" (click)="toggleQrCode()">
       TAMPILKAN KODE QR
     </button>
+  </div>
+
+  <div class="qr-code-background" id="qr-code">
+    <div class="qr-code-card">
+      <div class="card-close-section">
+        <div class="close-button" (click)="toggleQrCode()">
+          <i class="fas fa-times-circle"></i>
+        </div>
+      </div>
+
+      <div class="card-healthcoin-text">H E A L T H C O I N</div>
+      <div class="qr-code-section">
+        <div class="qr-code-box" (window:resize)="resizeQrCode()">
+          <qrcode [width]="qrHeight" [qrdata]="qrString" elementType="img" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+      </div>
+
+      <div class="scan-guide-text">Silakan pindai kode QR</div>
+
+      <div class="card-doctor-name">dr.Ian Joseph</div>
+    </div>
   </div>
 </body>

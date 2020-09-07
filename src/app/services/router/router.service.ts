@@ -17,8 +17,19 @@ export class RouterService {
     await this.router.navigate(['sign-up']);
   }
 
-
   async goToHomePage() {
     await this.router.navigate(['home']);
+  }
+
+  async goToRecordListPage() {
+  await this.router.navigate(['record-list']);
+  }
+
+  async goToWriteRecordPage() {
+    await this.router.navigate(['write-record']);
+  }
+
+  async goToReadRecordPage() {
+    await this.router.navigate(['read-record']);
   }
 }

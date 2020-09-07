@@ -1,0 +1,133 @@
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.static-section {
+  position: fixed;
+  min-width: 153vh;
+  width: 100vw;
+  height: 10vh;
+  left: 0;
+  top: 0;
+}
+
+header, .search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 10vh;
+}
+
+.title {
+  position: absolute;
+  width: fit-content;
+  height: 100%;
+  margin-left: 5%;
+  font-size: 4vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 40%;
+  height: 65%;
+  margin-left: 35%;
+  border-radius: 5vw;
+  background-color: white;
+}
+
+.search-icon, .search-disease {
+  position: relative;
+}
+
+.search-icon {
+  color: #32C8D7;
+  margin-left: 2%;
+  font-size: 4vh;
+}
+
+.search-disease {
+  height: 70%;
+  border: none;
+  font-size: 4vh;
+  width: 80%;
+  margin-left: 2%;
+}
+
+.write-button {
+  font-size: 4.5vh;
+  border: 0.5vh solid #7EF9FF;
+  border-radius: 1.5vh;
+  width: 6vh;
+  height: 6vh;
+  margin-left: 2%;
+  background-color: #7EF9FF;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-button {
+  position: relative;
+  color: #32C8D7;
+  border-radius: 50%;
+  font-size: 7vh;
+  float: right;
+  margin-left: 10vh;
+}
+
+.profile-name {
+  position: relative;
+  float: right;
+  font-size: 3vh;
+  margin: 0.8vh 0 0 2vh;
+}
+
+
+.content {
+  margin-top: 10vh;
+  position: fixed;
+  min-width: 153vh;
+  background-color: #5b6191;
+  height: 90vh;
+  width: 100%;
+}
+
+.content-box{
+  width: 95%;
+  height: 90%;
+  border: 1px solid lightskyblue;
+  border-radius: 4vh;
+  background-color: white;
+  margin: 2.5vh auto 0 auto;
+  padding-top: 3vh;
+}
+
+.record-content{
+  border: none;
+  width: 95%;
+  margin: 2vh 4vh;
+  font-size: 3vh;
+  color: #3db7a1;
+}
+
+#disease, #hospital, #doctor{
+  border-bottom: 1px solid lightskyblue;
+}
+
+#scrollable-section {
+  overflow-y: auto;
+}
+
+
