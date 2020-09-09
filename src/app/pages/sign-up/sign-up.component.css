@@ -1,0 +1,51 @@
+body {
+  background-color: #303450;
+  text-align: center;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.healthcoin-text {
+  color: white;
+  padding: 15vh 0 10vh 0;
+  font-size: 5vh;
+}
+
+.signup-box{
+  width: 50%;
+  position: relative;
+}
+
+.identity-box{
+  position: relative;
+  margin-top: 10%;
+  text-align: center;
+  height: 15vh;
+}
+
+.input-box {
+  width: 75%;
+  height: 10vw;
+  margin: 0 auto 3vw auto;
+  border-radius: 50px;
+  border: 1px solid;
+}
+
+.input-icon {
+  width: 10%;
+  float: left;
+  font-size: 6.5vw;
+  color: rgb(79, 208, 221);
+  margin-left: 5%;
+}
+
+.input-fill {
+  width: 75%;
+  height: 7.5vw;
+  border: none;
+  font-size: 5vw;
+  position: relative;
+  float: left;
+  margin-left: 5%;
+  top: 1vw;
+}
