@@ -1,0 +1,96 @@
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.healthcoin-text {
+  color: black;
+  padding: 7vh 0 7vh 0;
+  font-size: 3.5vh;
+}
+
+.background-box {
+  background: #3db7a1;
+  position: relative;
+  width: 50%;
+  display: inline-block;
+}
+
+.signup-box{
+  position: relative;
+  display: inline-block;
+  background: #303450;
+  width: 50%;
+}
+
+.identity-box{
+  position: relative;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.input-box {
+  width: 75%;
+  height: 5vh;
+  margin: 0 auto 3vh auto;
+  border-radius: 50px;
+  border: 1px solid;
+}
+
+.input-icon {
+  width: 10%;
+  float: left;
+  font-size: 2.5vw;
+  color: rgb(79, 208, 221);
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.input-fill {
+  width: 75%;
+  height: 3.5vw;
+  border: none;
+  font-size: 1.5vw;
+  position: relative;
+  float: left;
+  margin-left: 5%;
+  background: transparent;
+}
+
+.sign-up-button {
+  text-align: center;
+  border-radius: 50px;
+  width: 50%;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  height: 4vw;
+  font-size: 2vw;
+  margin: 5vh 20% 0 20%;
+}
+
+.sign-up-button:disabled {
+  opacity: 75%;
+  border: 1px solid #00bcd4;
+  color: #00bcd4;
+  background-color: white;
+}
+
+.sign-in-text {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.5vw;
+  font-family: "Roboto Light", sans-serif;
+}
+
+::placeholder {
+  opacity: 50%;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+  opacity: 50%;
+}
