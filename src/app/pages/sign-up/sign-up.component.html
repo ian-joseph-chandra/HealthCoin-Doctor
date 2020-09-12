@@ -10,7 +10,7 @@
           <i class="fa fa-user"></i>
         </span>
         <label>
-          <input class="input-fill" placeholder="Nama Depan" type="text">
+          <input class="input-fill" placeholder="Nama Depan" type="text" [(ngModel)]="inputFirstName" name="first-name">
         </label>
       </div>
 
@@ -19,14 +19,14 @@
           <i class="fa fa-user"></i>
         </span>
         <label>
-          <input class="input-fill" placeholder="Nama Belakang" type="text">
+          <input class="input-fill" placeholder="Nama Belakang" type="text" [(ngModel)]="inputLastName" name="last-name">
         </label>
       </div>
 
       <div class="input-box">
         <span class="input-icon">@</span>
         <label>
-          <input class="input-fill" placeholder="Email" type="text">
+          <input class="input-fill" placeholder="Email" type="text" [(ngModel)]="inputEmail" name="email">
         </label>
       </div>
 
@@ -35,7 +35,7 @@
           <i class="fa fa-key"></i>
         </span>
         <label>
-          <input class="input-fill" placeholder="Kata Sandi" type="password">
+          <input class="input-fill" placeholder="Kata Sandi" type="password" [(ngModel)]="inputPass" name="pass">
         </label>
       </div>
 
@@ -44,7 +44,7 @@
           <i class="fa fa-calendar"></i>
         </span>
         <label>
-          <input class="input-fill" onfocus="this.type='date'" placeholder="dd/mm/yyyy" type="text">
+          <input class="input-fill" onfocus="this.type='date'" placeholder="dd/mm/yyyy" type="text" [(ngModel)]="inputBirthDate" name="birthday">
         </label>
       </div>
 
@@ -53,17 +53,20 @@
           <i class="fa fa-id-card"></i>
         </span>
         <label>
-          <input class="input-fill" placeholder="No KTP" type="number">
+          <input class="input-fill" placeholder="No KTP" type="number" [(ngModel)]="inputNationalId" name="citizen-id">
         </label>
       </div>
 
-      <button class="sign-up-button"
+      <button class="sign-up-button" [disabled]="inputFirstName === '' || inputBirthDate === '' || inputEmail === ''
+            || inputPass === '' || inputNationalId === ''" (click)="signUp()"
               type="submit">DAFTAR
       </button>
-
-      <div class="sign-in-text">Sudah punya akun? Masuk</div>
-
     </form>
+
+    <div class="sign-in-text">
+      <span style="color: #aaa9a8"> Sudah memiliki akun? </span>
+      <span (click)="router.goToLoginPage()">Masuk</span>
+    </div>
   </div>
 
 </body>

@@ -46,17 +46,17 @@ body {
 .input-icon {
   width: 10%;
   float: left;
-  font-size: 2.5vw;
+  font-size: 3vh;
   color: rgb(79, 208, 221);
-  margin-left: 5%;
-  margin-top: 1%;
+  margin-left: 2vw;
+  margin-top: 0.75vh;
 }
 
 .input-fill {
   width: 75%;
-  height: 3.5vw;
+  height: 4vh;
   border: none;
-  font-size: 1.5vw;
+  font-size: 2.5vh;
   position: relative;
   float: left;
   margin-left: 5%;
@@ -72,7 +72,7 @@ body {
   color: white;
   border: none;
   height: 4vw;
-  font-size: 2vw;
+  font-size: 2.5vh;
   margin: 5vh 20% 0 20%;
 }
 
@@ -90,6 +90,7 @@ body {
   margin-top: 30px;
   font-size: 1.5vw;
   font-family: "Roboto Light", sans-serif;
+  color: white;
 }
 
 ::placeholder {
