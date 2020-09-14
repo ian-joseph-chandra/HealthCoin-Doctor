@@ -30,7 +30,7 @@ export class SignUpComponent implements OnInit {
   requestSent = false;
   error = false;
   message: string;
-  
+
   constructor(
     public router: RouterService,
     private api: ApiService) {
