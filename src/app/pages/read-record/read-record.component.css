@@ -126,8 +126,9 @@ header {
   border-bottom: 1px solid lightskyblue;
 }
 
-#scrollable-section {
+#detail {
   overflow-y: auto;
+  height: 60%;
 }
 
 

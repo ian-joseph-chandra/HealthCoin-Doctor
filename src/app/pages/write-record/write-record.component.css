@@ -112,9 +112,10 @@ header {
 
 ::placeholder{
   color: #3db7a1;
+  font-family: sans-serif;
 }
 
-.scrollable-section {
+#detail {
   overflow-y: auto;
 }
 
@@ -124,12 +125,17 @@ header {
   border: 1px solid lightskyblue;
   background-color: lightseagreen;
   color: white;
-  margin: 30vh 2vh 0 0;
+  margin: 4vh 2vh 0 0;
   width: 10%;
   height: 5.5vh;
   font-size: 3vh;
 }
 
+textarea{
+  color: #3db7a1;
+  font-family: sans-serif;
+  outline: none;
+}
 
 
 
