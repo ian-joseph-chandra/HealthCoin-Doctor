@@ -1,18 +1,17 @@
 export class User {
   private _user_id: number;
   private _role_id: number;
+  private _eth_id: number;
   private _first_name: string;
   private _last_name: string;
   private _gender: number;
   private _birth_date: Date;
   private _email: string;
   private _phoneNumber: string;
+  private _address: string;
   private _national_id: number;
 
-  constructor(user_id: number, first_name: string, last_name: string) {
-    this._user_id = user_id;
-    this._first_name = first_name;
-    this._last_name = last_name;
+  constructor() {
   }
 
   get user_id(): number {
@@ -29,6 +28,14 @@ export class User {
 
   set role_id(value: number) {
     this._role_id = value;
+  }
+
+  get eth_id(): number {
+    return this._eth_id;
+  }
+
+  set eth_id(value: number) {
+    this._eth_id = value;
   }
 
   get first_name(): string {
@@ -77,6 +84,14 @@ export class User {
 
   set phoneNumber(value: string) {
     this._phoneNumber = value;
+  }
+
+  get address(): string {
+    return this._address;
+  }
+
+  set address(value: string) {
+    this._address = value;
   }
 
   get national_id(): number {

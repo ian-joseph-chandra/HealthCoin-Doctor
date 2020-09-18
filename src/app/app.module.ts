@@ -13,8 +13,6 @@ import {WriteRecordComponent} from './pages/write-record/write-record.component'
 import {ReadRecordComponent} from './pages/read-record/read-record.component';
 import {SignUpComponent} from './pages/sign-up/sign-up.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

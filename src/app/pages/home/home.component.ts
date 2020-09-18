@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../../classes/user/user";
 
 @Component({
   selector: 'app-home',
@@ -12,10 +11,7 @@ export class HomeComponent implements OnInit {
   qrString: string;
   qrShowed: boolean;
 
-  doctor_info: User;
-
   constructor() {
-    this.doctor_info = new User(1, 'Ian', 'Joseph');
   }
 
   ngOnInit(): void {
