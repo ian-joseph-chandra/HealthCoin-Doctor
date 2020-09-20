@@ -1,4 +1,4 @@
-export class RecordAcces {
+export class RecordAccess {
   private _access_id: number;
   private _patient_id: number;
   private _token_access: string;
