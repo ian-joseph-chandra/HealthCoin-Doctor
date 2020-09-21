@@ -1,7 +1,10 @@
+import {UserRole} from '../user_role/user-role';
+import {EthAccount} from '../eth_account/eth-account';
+
 export class User {
   private _user_id: number;
-  private _role_id: number;
-  private _eth_id: number;
+  private _role_id: UserRole;
+  private _eth_id: EthAccount;
   private _first_name: string;
   private _last_name: string;
   private _gender: number;
@@ -22,19 +25,20 @@ export class User {
     this._user_id = value;
   }
 
-  get role_id(): number {
+  get role_id(): UserRole {
     return this._role_id;
   }
 
-  set role_id(value: number) {
+  set role_id(value: UserRole) {
     this._role_id = value;
   }
 
-  get eth_id(): number {
+
+  get eth_id(): EthAccount {
     return this._eth_id;
   }
 
-  set eth_id(value: number) {
+  set eth_id(value: EthAccount) {
     this._eth_id = value;
   }
 

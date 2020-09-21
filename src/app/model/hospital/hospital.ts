@@ -1,6 +1,8 @@
+import {EthAccount} from '../eth_account/eth-account';
+
 export class Hospital {
   private _hospital_code: string;
-  private _eth_id: number;
+  private _eth_id: EthAccount;
   private _name: string;
   private _address: string;
   private _email: string;
@@ -19,11 +21,11 @@ export class Hospital {
     this._hospital_code = value;
   }
 
-  get eth_id(): number {
+  get eth_id(): EthAccount {
     return this._eth_id;
   }
 
-  set eth_id(value: number) {
+  set eth_id(value: EthAccount) {
     this._eth_id = value;
   }
 

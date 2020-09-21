@@ -1,6 +1,8 @@
+import {User} from '../user/user';
+
 export class RecordAccess {
   private _access_id: number;
-  private _patient_id: number;
+  private _patient_id: User;
   private _token_access: string;
   private _access_time: Date;
   private _terminate_access: boolean;
@@ -17,11 +19,12 @@ export class RecordAccess {
     this._access_id = value;
   }
 
-  get patient_id(): number {
+
+  get patient_id(): User {
     return this._patient_id;
   }
 
-  set patient_id(value: number) {
+  set patient_id(value: User) {
     this._patient_id = value;
   }
 

@@ -1,8 +1,12 @@
+import {User} from '../user/user';
+import {DoctorWorkPlace} from '../doctor_work_place/doctor-work-place';
+import {Hospital} from '../hospital/hospital';
+
 export class Record {
   private _record_id: number;
-  private _patient_id: number;
-  private _doctor_id: number;
-  private _hospital_code: string;
+  private _patient_id: User;
+  private _doctor_id: DoctorWorkPlace;
+  private _hospital_code: Hospital;
   private _contact_address: string;
   private _record_time: Date;
   private _diagnose_info: string;
@@ -18,27 +22,29 @@ export class Record {
     this._record_id = value;
   }
 
-  get patient_id(): number {
+
+  get patient_id(): User {
     return this._patient_id;
   }
 
-  set patient_id(value: number) {
+  set patient_id(value: User) {
     this._patient_id = value;
   }
 
-  get doctor_id(): number {
+
+  get doctor_id(): DoctorWorkPlace {
     return this._doctor_id;
   }
 
-  set doctor_id(value: number) {
+  set doctor_id(value: DoctorWorkPlace) {
     this._doctor_id = value;
   }
 
-  get hospital_code(): string {
+  get hospital_code(): Hospital {
     return this._hospital_code;
   }
 
-  set hospital_code(value: string) {
+  set hospital_code(value: Hospital) {
     this._hospital_code = value;
   }
 

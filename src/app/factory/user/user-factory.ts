@@ -1,0 +1,16 @@
+import {User} from '../../model/user/user';
+
+export class UserFactory {
+
+  public static userHomePage(userId: number, firstName: string, lastName: string) {
+    const userData = new User();
+
+    userData.user_id = userId;
+    userData.first_name = firstName;
+    userData.last_name = lastName;
+
+    return userData;
+  }
+
+
+}
