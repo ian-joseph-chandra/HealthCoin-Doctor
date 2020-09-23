@@ -16,7 +16,7 @@ export class RecordListComponent implements OnInit {
   record: Record;
   patient: User;
   doctor: User;
-  patientId = 2;
+  patientId = 1;
 
   constructor(
     public router: RouterService,
