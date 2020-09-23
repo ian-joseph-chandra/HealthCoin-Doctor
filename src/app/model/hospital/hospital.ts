@@ -3,11 +3,10 @@ import {EthAccount} from '../eth_account/eth-account';
 export class Hospital {
   private _hospital_code: string;
   private _eth_id: EthAccount;
-  private _name: string;
-  private _address: string;
+  private _hospital_name: string;
+  private _hospital_address: string;
   private _email: string;
   private _phone_number: string;
-
 
   constructor() {
   }
@@ -29,20 +28,20 @@ export class Hospital {
     this._eth_id = value;
   }
 
-  get name(): string {
-    return this._name;
+  get hospital_name(): string {
+    return this._hospital_name;
   }
 
-  set name(value: string) {
-    this._name = value;
+  set hospital_name(value: string) {
+    this._hospital_name = value;
   }
 
-  get address(): string {
-    return this._address;
+  get hospital_address(): string {
+    return this._hospital_address;
   }
 
-  set address(value: string) {
-    this._address = value;
+  set hospital_address(value: string) {
+    this._hospital_address = value;
   }
 
   get email(): string {

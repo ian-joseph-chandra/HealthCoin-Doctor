@@ -26,10 +26,10 @@
 
   <div class="content">
     <div class="content-box">
-      <div class="record-content" id="disease">Penyakit</div>
-      <div class="record-content" id="hospital">Rumah sakit</div>
-      <div class="record-content" id="doctor">Dokter</div>
-      <p class="record-content" id="detail">Keterangan</p>
+      <div class="record-content" id="disease">{{record.disease_name}}</div>
+      <div class="record-content" id="hospital">{{record.hospital_code.hospital_name}}</div>
+      <div class="record-content" id="doctor">dr.{{record.doctor_id.first_name}} {{record.doctor_id.last_name}}</div>
+      <p class="record-content" id="detail">{{record.diagnostic_detail}}</p>
     </div>
   </div>
 </body>

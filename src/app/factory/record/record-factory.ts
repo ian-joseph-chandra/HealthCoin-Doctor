@@ -1,25 +1,40 @@
 import {User} from '../../model/user/user';
+import {Record} from '../../model/record/record';
+import {Hospital} from '../../model/hospital/hospital';
 
 export class RecordFactory {
 
-  // public static userHomePage(userId: number, firstName: string, lastName: string) {
-  //   const userData = new User();
-  //
-  //   userData.user_id = userId;
-  //   userData.first_name = firstName;
-  //   userData.last_name = lastName;
-  //
-  //   return userData;
-  // }
+  public static recordList(jsonList) {
+    const records: Record[] = [];
 
-  // "record_id": 1,
-  // "first_name": "Ian",
-  // "last_name": "Joseph",
-  // "hospital_name": "RS Pluit",
-  // "record_time": "2020-09-21T06:26:03.682Z",
-  // "diagnose_info": "Masuk angin"
+    for (const result of jsonList) {
+      const record = new Record();
+      const doctor = new User();
+      const hospital = new Hospital();
 
-  // public static recordRecordListPage(recordId: number, firstName: string, lastName: string, hospitalName: string, recordTime: Date, diagnoseInfo: string){
-  //   const recordListData = new record()
-  // }
+      doctor.first_name = result.first_name;
+      doctor.last_name = result.last_name;
+
+      hospital.hospital_name = result.hospital_name;
+
+      record.record_id = result.record_id;
+      record.doctor_id = doctor;
+      record.hospital_code = hospital;
+      record.record_time = result.record_time;
+      record.disease_name = result.disease_name;
+
+      records.push(record);
+    }
+
+    return records;
+  }
+
+
+  public static readRecord(record: Record, diagnoseInfo) {
+    const readRecordData = record;
+
+    readRecordData.diagnostic_detail = diagnoseInfo;
+
+    return readRecordData;
+  }
 }

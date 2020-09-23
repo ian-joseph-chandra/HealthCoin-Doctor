@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
+import {Record} from '../../model/record/record';
 
 @Injectable({
   providedIn: 'root'
@@ -22,14 +23,14 @@ export class RouterService {
   }
 
   async goToRecordListPage() {
-  await this.router.navigate(['record-list']);
+    await this.router.navigate(['record-list']);
+  }
+
+  async goToReadRecordPage(record: Record) {
+    await this.router.navigate(['read-record'], {state: {data: record}} );
   }
 
   async goToWriteRecordPage() {
     await this.router.navigate(['write-record']);
-  }
-
-  async goToReadRecordPage() {
-    await this.router.navigate(['read-record']);
   }
 }

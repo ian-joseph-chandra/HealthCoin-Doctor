@@ -18,7 +18,7 @@ export class ApiService {
    * @param requestData Request data in JSON format.
    */
   async sendPostRequest(urlTarget: string, requestData): Promise<any> {
-    let response;
+    let response = null;
 
     // Send the data to API server and store the response.
     await this.http.post(this.domain + urlTarget, requestData).toPromise().then(

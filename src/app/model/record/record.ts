@@ -1,16 +1,15 @@
 import {User} from '../user/user';
-import {DoctorWorkPlace} from '../doctor_work_place/doctor-work-place';
 import {Hospital} from '../hospital/hospital';
 
 export class Record {
   private _record_id: number;
   private _patient_id: User;
-  private _doctor_id: DoctorWorkPlace;
+  private _doctor_id: User;
   private _hospital_code: Hospital;
-  private _contact_address: string;
+  private _contract_address: string;
   private _record_time: Date;
   private _disease_name: string;
-  private _diagnose_info: string;
+  private _diagnostic_detail: string;
 
   constructor() {
   }
@@ -41,11 +40,11 @@ export class Record {
     this._disease_name = value;
   }
 
-  get doctor_id(): DoctorWorkPlace {
+  get doctor_id(): User {
     return this._doctor_id;
   }
 
-  set doctor_id(value: DoctorWorkPlace) {
+  set doctor_id(value: User) {
     this._doctor_id = value;
   }
 
@@ -57,12 +56,12 @@ export class Record {
     this._hospital_code = value;
   }
 
-  get contact_address(): string {
-    return this._contact_address;
+  get contract_address(): string {
+    return this._contract_address;
   }
 
-  set contact_address(value: string) {
-    this._contact_address = value;
+  set contract_address(value: string) {
+    this._contract_address = value;
   }
 
   get record_time(): Date {
@@ -73,11 +72,11 @@ export class Record {
     this._record_time = value;
   }
 
-  get diagnose_info(): string {
-    return this._diagnose_info;
+  get diagnostic_detail(): string {
+    return this._diagnostic_detail;
   }
 
-  set diagnose_info(value: string) {
-    this._diagnose_info = value;
+  set diagnostic_detail(value: string) {
+    this._diagnostic_detail = value;
   }
 }
