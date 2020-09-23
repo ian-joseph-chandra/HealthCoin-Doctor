@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
   }
 
   async updateQrCode() {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 5; i++) {
       this.createDoctorToken();
 
       for (let j = 0; j < 12; j++) {
@@ -93,7 +93,9 @@ export class HomeComponent implements OnInit {
       }
     }
 
-    await this.toggleQrCode();
+    if (this.qrShowed) {
+      await this.toggleQrCode();
+    }
   }
 
   delay(ms: number) {
