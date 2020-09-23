@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
     const response = await this.api.sendPostRequest('doctor-home', homeJSON);
 
     this.doctor = UserFactory.homePage(this.userId, response.data.first_name, response.data.last_name);
+    console.log(this.doctor);
   }
 
   async requestRecordAccess() {
