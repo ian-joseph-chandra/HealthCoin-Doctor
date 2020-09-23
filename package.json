@@ -22,6 +22,7 @@
     "@angular/router": "~10.0.9",
     "angularx-qrcode": "^10.0.6",
     "firebase": "^7.13.1",
+    "js-sha256": "^0.9.0",
     "ngx-cookie-service": "^10.0.1",
     "rxjs": "~6.5.5",
     "ts-md5": "^1.2.7",

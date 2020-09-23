@@ -31,10 +31,11 @@ export class RecordFactory {
 
 
   public static readRecord(record: Record, diagnoseInfo) {
-    const readRecordData = record;
+    // const readRecordData = record;
+    record.doctor_id = Object.assign(new User(), record.doctor_id);
+    record.hospital_code = Object.assign(new Hospital(), record.hospital_code);
+    record.diagnostic_detail = diagnoseInfo;
 
-    readRecordData.diagnostic_detail = diagnoseInfo;
-
-    return readRecordData;
+    return record;
   }
 }

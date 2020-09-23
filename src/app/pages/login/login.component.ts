@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ApiService} from '../../services/api/api.service';
 import {RouterService} from '../../services/router/router.service';
 import {CookieService} from 'ngx-cookie-service';
+import {Md5} from 'ts-md5';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,8 @@ export class LoginComponent implements OnInit {
   userId: string;
   message: string;
 
+  md5 = new Md5();
+
   constructor(
     public router: RouterService,
     private api: ApiService,
@@ -34,7 +37,7 @@ export class LoginComponent implements OnInit {
   async login() {
     await this.sendLoginData();
 
-// If not error, go to home page
+    // If not error, go to home page
     if (!this.error) {
       this.cookieService.set('user_id', this.userId);
       await this.router.goToHomePage();
@@ -49,10 +52,10 @@ export class LoginComponent implements OnInit {
     const passFillType = document.getElementById('password');
 
     if (this.showPassword) {
-// @ts-ignore
+      // @ts-ignore
       passFillType.type = 'text';
     } else {
-// @ts-ignore
+      // @ts-ignore
       passFillType.type = 'password';
     }
   }
@@ -61,16 +64,16 @@ export class LoginComponent implements OnInit {
    * Send the login data to API server and get the response. Set the error status and message according to the response.
    */
   async sendLoginData() {
-// Set status for requestSent.
+    // Set status for requestSent.
     this.requestSent = true;
 
-// Create JSON data of login information.
+    // Create JSON data of login information.
     const loginJSON = {
       email: this.inputEmail,
       pass: this.inputPass
     };
 
-// Send the data to the API server & store the response.
+    // Send the data to the API server & store the response.
     const loginResponse = await this.api.sendPostRequest('login', loginJSON);
 
     this.error = loginResponse.error;
@@ -81,5 +84,3 @@ export class LoginComponent implements OnInit {
     }
   }
 }
-
-

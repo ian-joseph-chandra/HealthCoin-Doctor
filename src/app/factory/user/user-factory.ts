@@ -12,7 +12,7 @@ export class UserFactory {
     return userData;
   }
 
-  public static doctorRecordListPage(userId: number, firstName: string, lastName: string){
+  public static doctorRecordListPage(userId: number, firstName: string, lastName: string) {
     const userData = new User();
 
     userData.user_id = userId;
@@ -22,7 +22,7 @@ export class UserFactory {
     return userData;
   }
 
-  public static patientRecordListPage(userId: number, firstName: string, lastName: string){
+  public static patientRecordListPage(userId: number, firstName: string, lastName: string) {
     const userData = new User();
 
     userData.user_id = userId;

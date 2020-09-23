@@ -4,6 +4,7 @@ import {ApiService} from '../../services/api/api.service';
 import {RecordFactory} from '../../factory/record/record-factory';
 import {User} from '../../model/user/user';
 import {Record} from '../../model/record/record';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-record-list',
@@ -16,14 +17,17 @@ export class RecordListComponent implements OnInit {
   record: Record;
   patient: User;
   doctor: User;
-  patientId = 1;
+  patientId;
 
   constructor(
     public router: RouterService,
-    private api: ApiService) {
+    private api: ApiService,
+    private cookieService: CookieService) {
   }
 
   async ngOnInit(): Promise<void> {
+    // tslint:disable-next-line:radix
+    await this.checkPatientCookie();
     await this.getPatientRecordList();
   }
 
@@ -36,5 +40,13 @@ export class RecordListComponent implements OnInit {
 
     this.records = RecordFactory.recordList(response['record-list']);
     console.log(this.records);
+  }
+
+  async checkPatientCookie() {
+    if (this.cookieService.get('patient_id') === '') {
+      await this.router.goToHomePage();
+    } else {
+      this.patientId = this.cookieService.get('patient_id');
+    }
   }
 }

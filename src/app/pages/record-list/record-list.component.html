@@ -3,7 +3,7 @@
     <div *ngFor="let record of records" class="record-box" (click)="router.goToReadRecordPage(record)">
       <span class="record-detail">{{record.disease_name}}</span>
       <span class="record-detail">{{record.hospital_code.hospital_name}}</span>
-      <span class="record-detail">dr.{{record.doctor_id.first_name}} {{record.doctor_id.last_name}}</span>
+      <span class="record-detail">dr. {{record.doctor_id.first_name}} {{record.doctor_id.last_name}}</span>
       <span class="record-detail">
         <span style="display: block">
           <span class="record-date">{{record.record_time.split('T')[0]}}</span>
@@ -37,7 +37,7 @@
         <i class="fas fa-user-circle"></i>
       </span>
 
-      <span class="profile-name">Dr. Ian Joseph</span>
+      <span class="profile-name">dr. Ian Joseph</span>
     </header>
 
     <div class="patient-profile">

@@ -26,7 +26,6 @@ export class ReadRecordComponent implements OnInit {
     await this.getDiagnosticDetail(this.record);
   }
 
-
   private async getDiagnosticDetail(record: Record) {
     const readRecordJSON = {
       record_id: record.record_id
@@ -35,6 +34,5 @@ export class ReadRecordComponent implements OnInit {
 
     this.record = RecordFactory.readRecord(this.record, readRecordResponse.data.diagnostic_detail);
     console.log(this.record);
-    console.log(this.record.doctor_id.first_name);
   }
 }
