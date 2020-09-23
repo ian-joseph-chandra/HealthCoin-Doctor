@@ -12,18 +12,16 @@ import {Record} from '../../model/record/record';
 })
 export class RecordListComponent implements OnInit {
 
-  constructor(
-    public router: RouterService,
-    private api: ApiService) {
-  }
-
-  public static record: Record;
-
   records;
   record: Record;
   patient: User;
   doctor: User;
   patientId = 2;
+
+  constructor(
+    public router: RouterService,
+    private api: ApiService) {
+  }
 
   async ngOnInit(): Promise<void> {
     await this.getPatientRecordList();
@@ -34,8 +32,9 @@ export class RecordListComponent implements OnInit {
       patient_id: this.patientId
     };
 
-    const recordListResponse = await this.api.sendPostRequest('record-list', recordListJSON);
+    const response = await this.api.sendPostRequest('record-list', recordListJSON);
 
-    this.records = RecordFactory.recordList(recordListResponse['record-list']);
+    this.records = RecordFactory.recordList(response['record-list']);
+    console.log(this.records);
   }
 }
