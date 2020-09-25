@@ -55,7 +55,6 @@ export class HomeComponent implements OnInit {
     const response = await this.api.sendPostRequest('doctor-home', homeJSON);
 
     this.doctor = UserFactory.homePage(this.userId, response.data.first_name, response.data.last_name);
-    console.log(this.doctor);
   }
 
   async requestRecordAccess() {
@@ -67,6 +66,7 @@ export class HomeComponent implements OnInit {
 
     if (response['get-access'] === true) {
       this.cookieService.set('patient_id', response.data.patient_id);
+      await this.toggleQrCode();
       await this.router.goToRecordListPage();
     }
   }
@@ -80,9 +80,9 @@ export class HomeComponent implements OnInit {
     for (let i = 0; i < 5; i++) {
       this.createDoctorToken();
 
-      for (let j = 0; j < 12; j++) {
+      for (let j = 0; j < 20; j++) {
         if (this.qrShowed) {
-          await this.delay(5000);
+          await this.delay(3000);
           await this.requestRecordAccess();
         } else {
           break;
