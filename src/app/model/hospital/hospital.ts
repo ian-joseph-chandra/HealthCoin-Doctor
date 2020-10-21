@@ -11,7 +11,6 @@ export class Hospital {
   constructor() {
   }
 
-
   get hospital_code(): string {
     return this._hospital_code;
   }

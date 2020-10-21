@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
     // If not error, go to home page
     if (!this.error) {
-      this.cookieService.set('user_id', this.userId);
+      this.cookieService.set('doctor_id', this.userId);
       await this.router.goToHomePage();
     }
   }
@@ -68,19 +68,21 @@ export class LoginComponent implements OnInit {
     this.requestSent = true;
 
     // Create JSON data of login information.
-    const loginJSON = {
+    const JSON = {
       email: this.inputEmail,
-      pass: this.inputPass
+      pass: this.md5.appendStr(this.inputPass).end()
     };
 
     // Send the data to the API server & store the response.
-    const loginResponse = await this.api.sendPostRequest('login', loginJSON);
+    const response = await this.api.sendPostRequest('doctor-login', JSON);
 
-    this.error = loginResponse.error;
+    console.log(response);
+
+    this.error = response.error;
     if (this.error) {
-      this.message = loginResponse.message;
+      this.message = response.message;
     } else {
-      this.userId = loginResponse.data.user_id;
+      this.userId = response.data.user_id;
     }
   }
 }

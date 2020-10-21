@@ -1,7 +1,7 @@
 <body class="dark-mode">
   <div class="static-section">
     <header>
-      <span class="title">H E A L T H C O I N</span>
+      <span class="title" (click)="router.goToHomePage()">H E A L T H C O I N</span>
 
       <span class="search-bar">
         <span class="search-icon">
@@ -15,18 +15,17 @@
         <i class="fas fa-user-circle"></i>
       </span>
 
-      <span class="profile-name">Dr. Ian Joseph</span>
+      <span class="profile-name">dr. {{doctor.first_name}} {{doctor.last_name}}</span>
     </header>
   </div>
 
 
   <div class="content">
     <div class="content-box">
-      <input class="record-content" id="disease" placeholder="Penyakit" maxlength="20">
-      <input class="record-content" id="hospital" placeholder="Rumah Sakit">
-      <input class="record-content" id="doctor" placeholder="Dokter">
-      <textarea class="record-content" id="detail" placeholder="Keterangan" rows="13" cols="40"></textarea>
-      <button class="upload-button">Upload</button>
+      <input class="record-content" id="disease" placeholder="Penyakit" maxlength="20" [(ngModel)]="inputDiseaseName">
+      <textarea class="record-content" id="detail" placeholder="Keterangan" rows="13" cols="40"
+                [(ngModel)]="inputDiagnosticDetail"></textarea>
+      <button class="upload-button" (click)="sendRecord()">Upload</button>
     </div>
   </div>
 </body>

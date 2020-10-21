@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../model/user/user';
 import {UserFactory} from '../../factory/user/user-factory';
-import {ApiService} from '../../services/api/api.service';
 import {RouterService} from '../../services/router/router.service';
 import {sha256} from 'js-sha256';
 import {CookieService} from 'ngx-cookie-service';
+import {SessionService} from '../../services/session/session.service';
+import {ApiService} from '../../services/api/api.service';
 
 @Component({
   selector: 'app-home',
@@ -16,16 +17,19 @@ export class HomeComponent implements OnInit {
   qrHeight: any;
   qrString: string;
   qrShowed: boolean;
-  userId = 2;
+  doctorId;
   doctor: User;
 
   constructor(
     private api: ApiService,
     private router: RouterService,
-    private cookieService: CookieService) {
+    private cookie: CookieService,
+    private session: SessionService) {
   }
 
   async ngOnInit(): Promise<void> {
+    this.doctorId = await this.session.checkSession();
+
     await this.getDoctorData();
 
     this.qrHeight = window.innerHeight * 0.37;
@@ -48,13 +52,13 @@ export class HomeComponent implements OnInit {
 
   async getDoctorData() {
     const homeJSON = {
-      user_id: this.userId
+      user_id: this.doctorId
     };
 
     // Send the data to the API server & store the response.
     const response = await this.api.sendPostRequest('doctor-home', homeJSON);
 
-    this.doctor = UserFactory.homePage(this.userId, response.data.first_name, response.data.last_name);
+    this.doctor = UserFactory.homePage(this.doctorId, response.data.first_name, response.data.last_name);
   }
 
   async requestRecordAccess() {
@@ -65,7 +69,7 @@ export class HomeComponent implements OnInit {
     const response = await this.api.sendPostRequest('request-access', JSON);
 
     if (response['get-access'] === true) {
-      this.cookieService.set('patient_id', response.data.patient_id);
+      this.cookie.set('patient_id', response.data.patient_id);
       await this.toggleQrCode();
       await this.router.goToRecordListPage();
     }

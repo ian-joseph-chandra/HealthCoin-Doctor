@@ -29,7 +29,7 @@
       </span>
     </div>
 
-    <!-- <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
+<!--     <div role="button" class="user-recovery-hyperlink" (click)="router.goToUserRecoveryPage()">Lupa kata sandi?</div> -->
     <div *ngIf="error" class="error-message">{{message}}</div>
     <button type="submit" [disabled]="inputEmail=='' || inputPass==''" (click)="login()" class="login-button">
       LOG IN

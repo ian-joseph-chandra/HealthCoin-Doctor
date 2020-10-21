@@ -10152,7 +10152,7 @@ hospital:
 hospital-alt:
   changes:
     - 5.0.7
-  label: Alternate Hospital
+  label: Alternate HospitalFactory
   search:
     terms:
       - building
@@ -10166,7 +10166,7 @@ hospital-alt:
 hospital-symbol:
   changes:
     - 5.0.7
-  label: Hospital Symbol
+  label: HospitalFactory Symbol
   search:
     terms:
       - clinic
@@ -10180,7 +10180,7 @@ hospital-symbol:
 hospital-user:
   changes:
     - 5.7.0
-  label: Hospital with User
+  label: HospitalFactory with User
   search:
     terms:
       - covid-19

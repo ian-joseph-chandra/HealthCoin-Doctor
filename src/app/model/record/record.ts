@@ -10,6 +10,8 @@ export class Record {
   private _record_time: Date;
   private _disease_name: string;
   private _diagnostic_detail: string;
+  private _hash_value: string;
+  private _valid: boolean;
 
   constructor() {
   }
@@ -78,5 +80,21 @@ export class Record {
 
   set diagnostic_detail(value: string) {
     this._diagnostic_detail = value;
+  }
+
+  get hash_value(): string {
+    return this._hash_value;
+  }
+
+  set hash_value(value: string) {
+    this._hash_value = value;
+  }
+
+  get valid(): boolean {
+    return this._valid;
+  }
+
+  set valid(value: boolean) {
+    this._valid = value;
   }
 }

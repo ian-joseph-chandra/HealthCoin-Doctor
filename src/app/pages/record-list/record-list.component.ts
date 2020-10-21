@@ -5,6 +5,7 @@ import {RecordFactory} from '../../factory/record/record-factory';
 import {User} from '../../model/user/user';
 import {Record} from '../../model/record/record';
 import {CookieService} from 'ngx-cookie-service';
+import {SessionService} from '../../services/session/session.service';
 
 @Component({
   selector: 'app-record-list',
@@ -17,16 +18,19 @@ export class RecordListComponent implements OnInit {
   record: Record;
   patient: User;
   doctor: User;
+  doctorId;
   patientId;
 
   constructor(
     public router: RouterService,
     private api: ApiService,
-    private cookieService: CookieService) {
+    private cookie: CookieService,
+    private session: SessionService) {
   }
 
   async ngOnInit(): Promise<void> {
-    // tslint:disable-next-line:radix
+    this.doctorId = await this.session.checkSession();
+
     await this.checkPatientCookie();
     await this.getPatientRecordList();
   }
@@ -38,15 +42,15 @@ export class RecordListComponent implements OnInit {
 
     const response = await this.api.sendPostRequest('record-list', recordListJSON);
 
-    this.records = RecordFactory.recordList(response['record-list']);
+    this.records = RecordFactory.recordList(this.patientId, response['record-list']);
     console.log(this.records);
   }
 
   async checkPatientCookie() {
-    if (this.cookieService.get('patient_id') === '') {
+    if (this.cookie.get('patient_id') === '') {
       await this.router.goToHomePage();
     } else {
-      this.patientId = this.cookieService.get('patient_id');
+      this.patientId = this.cookie.get('patient_id');
     }
   }
 }
